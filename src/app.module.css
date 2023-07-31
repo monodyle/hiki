@@ -1,0 +1,58 @@
+.container {
+  margin: 48px auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contentDesktop {
+  min-width: 360px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  .icon {
+    color: #0051fe;
+    width: 96px;
+  }
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 24px;
+  .sent {
+    color: #565656;
+    font-weight: 500;
+  }
+  .value {
+    color: #0051fe;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  .receiver {
+    color: #565656;
+  }
+}
+
+.action {
+  width: 100%;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
