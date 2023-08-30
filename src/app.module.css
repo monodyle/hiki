@@ -8,9 +8,6 @@
 }
 
 .heading {
-  font-size: 56px;
-  line-height: 1;
-  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +17,15 @@
 
 .romaji {
   font-size: 16px;
+  line-height: 8px;
   color: var(--stone-500)
+}
+
+.japanese {
+  font-family: 'Dela Gothic One', cursive;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 48px;
 }
 
 .desc {

@@ -7,7 +7,7 @@ function App() {
       <div className={styles.container}>
         <h1 className={styles.heading}>
           <span className={styles.romaji}>/hiki/</span>
-          引き
+          <span className={styles.japanese}>引き</span>
         </h1>
         <div className={styles.desc}>
           a dialog that turn into drawer on small viewport
