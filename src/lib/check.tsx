@@ -1,10 +1,9 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 const CheckBadgeIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
-    className="w-6 h-6"
     viewBox="0 0 24 24"
     {...props}
   >
@@ -14,6 +13,6 @@ const CheckBadgeIcon = (props: SVGProps<SVGSVGElement>) => (
       clipRule="evenodd"
     />
   </svg>
-)
+);
 
-export default CheckBadgeIcon
+export default CheckBadgeIcon;

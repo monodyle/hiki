@@ -1,0 +1,67 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contentDesktop {
+  min-width: 360px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  .icon {
+    color: var(--primary);
+    width: 96px;
+  }
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 24px;
+  .sent {
+    color: var(--stone-500);
+    font-weight: 500;
+  }
+  .value {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  .receiver {
+    color: var(--stone-500);
+  }
+}
+
+.action {
+  width: 100%;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid var(--stone-200);
+  border-radius: 4px;
+  background-color: var(--stone-50);
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  padding: 0 24px;
+  line-height: 36px;
+  background-color: var(--primary);
+  border: 0 none;
+  border-radius: 36px;
+  color: var(--stone-50);
+  font-weight: 600;
+  cursor: pointer;
+}

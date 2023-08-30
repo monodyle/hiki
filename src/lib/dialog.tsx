@@ -16,7 +16,9 @@ const MotionModalOverlay = motion(ModalOverlay);
 
 type Props = Omit<DialogTriggerProps, "children"> & {
   isDismissable?: boolean;
-  target:
+  isKeyboardDismissDisabled?: boolean;
+  className?: boolean;
+  target?:
     | React.ReactNode
     | ((opts: {
         open: () => void;
@@ -32,7 +34,9 @@ type Props = Omit<DialogTriggerProps, "children"> & {
 export const Dialog: React.FC<Props> = ({
   children,
   target,
+  className,
   isDismissable,
+  isKeyboardDismissDisabled,
   ...props
 }) => {
   const [_isOpen, _setOpen] = useState(false);
@@ -81,22 +85,25 @@ export const Dialog: React.FC<Props> = ({
         ? target({ open: () => setOpen(true), isMobileViewPort })
         : target}
       <MotionModalOverlay
-        className={styles.overlay}
+        className={[styles.overlay, className].join(' ')}
         isDismissable={isDismissable}
+        isKeyboardDismissDisabled={isKeyboardDismissDisabled}
+        data-hiki-overlay
       >
         <MotionModal
           className={[styles.modal, isMobileViewPort && styles.mobile].join(
             " "
           )}
           ref={modalRef}
+          data-hiki-modal
           {...modalProps}
         >
-          {isMobileViewPort && <div className={styles.affordance} />}
-          <DialogContent className={styles.dialog}>
+          {isMobileViewPort && <div className={styles.affordance} data-hiki-affordance />}
+          <DialogContent className={styles.dialog} data-hiki-content>
             {({ close }) => (
               <Fragment>
                 {isDismissable && !isMobileViewPort && (
-                  <button className={styles.close} onClick={close} />
+                  <button className={styles.close} onClick={close} data-hiki-close />
                 )}
                 {typeof children === "function"
                   ? children({ close, isMobileViewPort })

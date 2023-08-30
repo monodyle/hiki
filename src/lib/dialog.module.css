@@ -1,7 +1,8 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: oklch(0% 0 0 / 70%);
+  backdrop-filter: blur(10px);
   display: flex;
   z-index: 10;
 
@@ -17,7 +18,7 @@
 .modal {
   margin: 72px auto 0;
   min-width: 256px;
-  background: #fcfcfc;
+  background: var(--stone-100);
   border-radius: 12px;
   outline: none;
   align-self: baseline;
@@ -32,7 +33,7 @@
 }
 
 .affordance {
-  background-color: #aaa;
+  background-color: var(--stone-400);
   margin: 8px auto 0;
   width: 48px;
   height: 6px;
@@ -68,7 +69,7 @@
     height: 16px;
     width: 2px;
     border-radius: 2px;
-    background-color: #565656;
+    background-color: var(--stone-400);
     rotate: 45deg;
   }
 
@@ -79,12 +80,12 @@
 
 @keyframes blur {
   from {
-    background: rgba(0, 0, 0, 0);
+    background: oklch(0% 0 0 / 0%);
     backdrop-filter: blur(0px);
   }
 
   to {
-    background: rgba(0, 0, 0, 0.7);
+    background: oklch(0% 0 0 / 70%);
     backdrop-filter: blur(10px);
   }
 }

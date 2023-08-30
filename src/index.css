@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  font-family: 'Work Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -10,14 +10,32 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --stone-50: oklch(98.48% 0.001 106.42);
+  --stone-100: oklch(96.99% 0.001 106.42);
+  --stone-200: oklch(92.32% 0.003 48.72);
+  --stone-300: oklch(86.87% 0.004 56.37);
+  --stone-400: oklch(71.61% 0.009 56.26);
+  --stone-500: oklch(55.34% 0.012 58.07);
+  --stone-600: oklch(44.44% 0.01 73.64);
+  --stone-700: oklch(37.41% 0.009 67.56);
+  --stone-800: oklch(26.85% 0.006 34.3);
+  --stone-900: oklch(21.61% 0.006 56.04);
+  --stone-950: oklch(14.69% 0.004 49.25);
+
+  --primary: oklch(52.56% 0.26269367484700523 262.9171850512645);
 }
 
-button, input {
-  font-family: 'Work Sans', sans-serif;
+button,
+input {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
   margin: 0;
+  background-color: var(--stone-100);
+  color: var(--stone-900);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='429' height='51.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23E7E5E4' stroke-width='1' stroke-opacity='0.77'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 main {
