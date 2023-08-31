@@ -84,7 +84,16 @@ export const Demo = () => {
                 </ListBox>
               </Popover>
             </Select>
+            <small>
+              ✅ This event will take place on the {now.toDateString()} at{" "}
+              {now.toLocaleTimeString()}
+            </small>
           </div>
+          <TextField className={styles.field}>
+            <Label>Location</Label>
+            <Input placeholder="Location" />
+            <Button className={styles.inputButton}>Set meeting room</Button>
+          </TextField>
           <button className={styles.action} onClick={close}>
             Confirm
           </button>

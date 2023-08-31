@@ -27,6 +27,10 @@
   --primary: oklch(52.56% 0.26269367484700523 262.9171850512645);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 button,
 input {
   font-family: "Space Grotesk", sans-serif;

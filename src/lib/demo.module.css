@@ -44,15 +44,21 @@
   gap: 8px;
 }
 
+.group small {
+  grid-column: 1 / 4;
+  color: var(--stone-500);
+}
+
 .field {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 8px;
 }
 
 .field > label,
 .field > span {
-  color: var(--stone-500);
+  color: var(--stone-700);
   font-weight: 500;
 }
 
@@ -61,10 +67,11 @@
   display: block;
   width: 100%;
   background-color: oklch(55.34% 0.012 58.07 / 5%);
-  border: 1px solid var(--stone-200);
-  border-radius: 8px;
-  box-shadow: 0px 8px 16px -10px oklch(21.61% 0.006 56.04 / 15%);
-  padding: 4px 12px;
+  border: 1px solid var(--stone-300);
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px -10px oklch(21.61% 0.006 56.04 / 12%);
+  padding: 6px 12px;
+  line-height: 24px;
 }
 
 .field .select .chevron {
@@ -76,6 +83,23 @@
 
 .field .select[data-pressed] {
   border-color: var(--stone-300);
+}
+
+.field .inputButton {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  bottom: 4px;
+  right: 4px;
+  background-color: var(--stone-100);
+  border: 1px solid var(--stone-300);
+  line-height: 24px;
+  border-radius: 6px;
+  padding: 2px 8px;
+  box-shadow: 0px 2px 4px -2px oklch(21.61% 0.006 56.04 / 8%), 0px 8px 16px -10px oklch(21.61% 0.006 56.04 / 12%);
+}
+.field .inputButton:hover {
+  background-color: var(--stone-200);
 }
 
 .popover {
