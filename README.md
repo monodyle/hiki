@@ -40,11 +40,9 @@ function Application() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen} target={<button onClick={() => setOpen(true)}>Open Dialog</button>}>
-      {({ close }) => (
-        <div className="content">
-          {/* your code goes here */}
-        </div>
-      )}
+      <div className="content">
+        {/* your code goes here */}
+      </div>
     </Dialog>
   )
 }
