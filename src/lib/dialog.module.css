@@ -1,18 +1,11 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: oklch(0% 0 0 / 70%);
+  background: oklch(0% 0 0 / 40%);
   backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   z-index: 10;
-
-  &[data-entering] {
-    animation: blur 300ms ease-in-out;
-  }
-
-  &[data-exiting] {
-    animation: blur 300ms reverse ease-in-out;
-  }
 }
 
 .modal {
@@ -22,14 +15,6 @@
   border-radius: 12px;
   outline: none;
   align-self: baseline;
-
-  &[data-entering] {
-    animation: slide 300ms ease-in-out;
-  }
-
-  &[data-exiting] {
-    animation: slide 300ms reverse ease-in-out;
-  }
 }
 
 .affordance {
@@ -58,73 +43,47 @@
   width: 24px;
   height: 24px;
   padding: 0;
-
-  &::before,
-  &::after {
-    top: 4px;
-    right: 10px;
-    position: absolute;
-    content: ' ';
-    display: block;
-    height: 16px;
-    width: 2px;
-    border-radius: 2px;
-    background-color: var(--stone-400);
-    rotate: 45deg;
-  }
-
-  &::after {
-    rotate: -45deg;
-  }
 }
 
-@keyframes blur {
-  from {
-    background: oklch(0% 0 0 / 0%);
-    backdrop-filter: blur(0px);
-  }
-
-  to {
-    background: oklch(0% 0 0 / 70%);
-    backdrop-filter: blur(10px);
-  }
+.close::before,
+.close::after {
+  top: 4px;
+  right: 10px;
+  position: absolute;
+  content: " ";
+  display: block;
+  height: 16px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: var(--stone-400);
+  rotate: 45deg;
 }
 
-@keyframes slide {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+.close::after {
+  rotate: -45deg;
 }
 
 .modal.mobile {
-  margin: 0;
   min-width: unset;
   width: 100%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  position: relative;
+  flex: 1;
   align-self: flex-end;
-  &[data-entering] {
-    animation: slideMobile 300ms ease-in-out;
-  }
-  &[data-exiting] {
-    animation: slideMobile 300ms reverse ease-in-out;
-  }
 }
 
-@keyframes slideMobile {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
+.modal.mobile::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
 
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+.modal.mobile .dialog {
+  height: 100%;
 }
