@@ -62,10 +62,11 @@
   font-weight: 500;
 }
 
-.field input,
+.field .input,
 .field .select {
   display: block;
   width: 100%;
+  color: var(--stone-900);
   background-color: oklch(55.34% 0.012 58.07 / 5%);
   border: 1px solid var(--stone-300);
   border-radius: 10px;

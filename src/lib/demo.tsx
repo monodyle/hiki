@@ -34,12 +34,13 @@ export const Demo = () => {
           <h2 className={styles.heading}>Create an invite</h2>
           <TextField className={styles.field}>
             <Label>Title</Label>
-            <Input placeholder="Event title" />
+            <Input className={styles.input} placeholder="Event title" />
           </TextField>
           <div className={styles.group}>
             <TextField className={styles.field}>
               <Label>Date</Label>
               <Input
+                className={styles.input}
                 placeholder="Date"
                 type="date"
                 defaultValue={now.toISOString().split("T")[0]}
@@ -48,6 +49,7 @@ export const Demo = () => {
             <TextField className={styles.field}>
               <Label>Time</Label>
               <Input
+              className={styles.input}
                 placeholder="Time"
                 type="time"
                 defaultValue={now.toTimeString().split(" ")[0]}
@@ -91,7 +93,7 @@ export const Demo = () => {
           </div>
           <TextField className={styles.field}>
             <Label>Location</Label>
-            <Input placeholder="Location" />
+            <Input className={styles.input} placeholder="Location" />
             <Button className={styles.inputButton}>Set meeting room</Button>
           </TextField>
           <button className={styles.action} onClick={close}>
