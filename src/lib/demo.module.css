@@ -75,6 +75,11 @@
   line-height: 24px;
 }
 
+.field .select {
+  display: flex;
+  justify-content: space-between;
+}
+
 .field .select .chevron {
   display: inline-block;
   transform: translateY(-4px);

@@ -14,6 +14,9 @@ import {
 } from "react-aria-components";
 
 const now = new Date();
+now.setSeconds(0);
+now.setMinutes(now.getMinutes() + 1);
+
 export const Demo = () => {
   return (
     <Dialog
@@ -42,16 +45,14 @@ export const Demo = () => {
               <Input
                 className={styles.input}
                 placeholder="Date"
-                type="date"
-                defaultValue={now.toISOString().split("T")[0]}
+                defaultValue={now.toLocaleDateString().split(",")[0]}
               />
             </TextField>
             <TextField className={styles.field}>
               <Label>Time</Label>
               <Input
-              className={styles.input}
+                className={styles.input}
                 placeholder="Time"
-                type="time"
                 defaultValue={now.toTimeString().split(" ")[0]}
               />
             </TextField>
