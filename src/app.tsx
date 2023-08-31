@@ -15,6 +15,25 @@ function App() {
         </div>
         <Demo />
       </div>
+      <footer className={styles.footer}>
+        © monodyle 2023+
+        <br />
+        <a
+          href="https://github.com/monodyle/hiki"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          github
+        </a>{" "}
+        /{" "}
+        <a
+          href="https://ko-fi.com/monodyle"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          buy me a coffee
+        </a>
+      </footer>
     </main>
   );
 }
