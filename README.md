@@ -12,17 +12,39 @@ Preview the example on https://hiki.minhle.space/
 
 ## Quick start
 
+### Uncontrolled
+
 ```jsx
 import { Dialog } from "@monodyle/hiki"; // not published yet...
 
 function Application() {
   return (
     <Dialog target={({ open }) => <button onClick={open}>Open Dialog</button>}>
-      <div className="content">
-        {({ close }) => (
-          {/* Your code here */}
-        )}
-      </div>
+      {({ close }) => (
+        <div className="content">
+          {/* your code goes here */}
+        </div>
+      )}
+    </Dialog>
+  )
+}
+```
+
+### Controlled
+
+```jsx
+import { Dialog } from "@monodyle/hiki"; // not published yet...
+
+function Application() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen} target={<button onClick={() => setOpen(true)}>Open Dialog</button>}>
+      {({ close }) => (
+        <div className="content">
+          {/* your code goes here */}
+        </div>
+      )}
     </Dialog>
   )
 }
