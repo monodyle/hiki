@@ -12,22 +12,24 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin: 0;  
+  margin: 0;
 }
 
 .romaji {
   font-size: 16px;
   line-height: 8px;
-  color: var(--stone-500)
+  font-weight: 500;
+  color: var(--stone-500);
 }
 
 .japanese {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   font-size: 56px;
   font-weight: 600;
   line-height: 48px;
 }
 
 .desc {
-  color: var(--stone-500)
+  color: var(--stone-600);
+  text-align: center;
 }

@@ -1,8 +1,9 @@
-
 .content {
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 24px;
+  padding-bottom: 12px;
 }
 
 .contentDesktop {
@@ -10,51 +11,14 @@
 }
 
 .heading {
-  text-align: center;
+  margin: 0;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
 }
 
-.check {
-  display: flex;
-  justify-content: center;
-  .icon {
-    color: var(--primary);
-    width: 96px;
-  }
-}
-
-.info {
-  text-align: center;
-  margin-bottom: 24px;
-  .sent {
-    color: var(--stone-500);
-    font-weight: 500;
-  }
-  .value {
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.5;
-  }
-  .receiver {
-    color: var(--stone-500);
-  }
-}
-
+.button,
 .action {
-  width: 100%;
-  font-weight: 600;
-  padding: 12px 16px;
-  text-align: center;
-  border: 1px solid var(--stone-200);
-  border-radius: 4px;
-  background-color: var(--stone-50);
-  cursor: pointer;
-}
-
-.button {
   display: block;
   padding: 0 24px;
   line-height: 36px;
@@ -64,4 +28,109 @@
   color: var(--stone-50);
   font-weight: 600;
   cursor: pointer;
+}
+
+.action {
+  width: 100%;
+  font-weight: 600;
+  margin-top: auto;
+  line-height: 48px;
+  border-radius: 8px;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  gap: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field > label,
+.field > span {
+  color: var(--stone-500);
+  font-weight: 500;
+}
+
+.field input,
+.field .select {
+  display: block;
+  width: 100%;
+  background-color: oklch(55.34% 0.012 58.07 / 5%);
+  border: 1px solid var(--stone-200);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px -10px oklch(21.61% 0.006 56.04 / 15%);
+  padding: 4px 12px;
+}
+
+.field .select .chevron {
+  display: inline-block;
+  transform: translateY(-4px);
+  padding-left: 4px;
+  color: var(--stone-500);
+}
+
+.field .select[data-pressed] {
+  border-color: var(--stone-300);
+}
+
+.popover {
+  border: 1px solid var(--stone-200);
+  min-width: var(--trigger-width);
+  max-width: 250px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(0 0 0 / 0.1);
+  border-radius: 6px;
+  background: var(--stone-100);
+  outline: none;
+}
+
+.listBox {
+  max-height: inherit;
+  overflow: auto;
+  padding: 2px;
+  outline: none;
+}
+
+.listBox .item {
+  margin: 2px;
+  padding: 0.286rem 0.571rem 0.286rem 1.571rem;
+  border-radius: 6px;
+  outline: none;
+  cursor: default;
+  color: var(--stone-900);
+  font-size: 1.072rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &[aria-selected="true"] {
+    font-weight: 600;
+
+    &::before {
+      content: "✓";
+      content: "✓" / "";
+      alt: " ";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+  }
+
+  &[data-focused],
+  &[data-pressed] {
+    background: var(--stone-200);
+  }
+
+  [slot="label"] {
+    font-weight: 600;
+  }
+
+  [slot="description"] {
+    font-size: small;
+  }
 }

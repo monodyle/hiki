@@ -10,7 +10,8 @@ function App() {
           <span className={styles.japanese}>引き</span>
         </h1>
         <div className={styles.desc}>
-          a dialog that turn into drawer on small viewport
+          a dialog that turn into
+          <br />a drawer on small viewport
         </div>
         <Demo />
       </div>
