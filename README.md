@@ -3,7 +3,6 @@
 		<img src="./preview.png" />
 	</a>
 	<br />
-  <hr />
 	<sup class="right">hiki - a dialog will turn into a drawer on small viewport</sup>
 </p>
 
